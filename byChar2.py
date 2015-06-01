@@ -6,8 +6,8 @@ def match(pattern, string):
 	if (lenPattern > lenString or lenPattern == 0):
 		return False
 	charsMatched = 0
-	for i in range(0,len(string)):
-		for j in range(0,len(pattern)):
+	for i in range(0,lenString):
+		for j in range(0,lenPattern):
 			if (pattern[j] == string[i]):
 				charsMatched += 1
 				if (charsMatched == lenPattern):
