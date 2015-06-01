@@ -44,7 +44,19 @@ class testMatch(unittest.TestCase):
 		p = 'this is a test'
 		self.assertTrue(match(p,s))
 			
-
+	def testSingleCharWherePatternIsInString(self):
+		s = 'a'
+		p = 'a'
+		self.assertTrue(match(p,s))	
+	"""
+	def testEmptyStrings(self):
+	#this fails, i would think it wouldn't. Basically it should 
+	#find the space between 'this' and 'is' 
+		s = ' '
+		p = 'this is'
+		self.assertTrue(match(p,s))	
+	
+	"""
 if __name__ == "__main__":
 	unittest.main()
 
