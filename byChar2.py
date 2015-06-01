@@ -55,7 +55,7 @@ class testMatch(unittest.TestCase):
 		s = ' '
 		p = 'this is'
 		self.assertTrue(match(p,s))	
-	
+	#makes sense actually - the code above checks for len of the string, and it can't be 0 which is what len(' ') gives me
 	"""
 if __name__ == "__main__":
 	unittest.main()
