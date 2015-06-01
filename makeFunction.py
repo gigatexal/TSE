@@ -7,7 +7,6 @@ strToSearch = strToSearch.lower();
 
 pattern = pattern.lower();
 
-#create a function called match that takes two arguments, one the pattern, the other the string, returns true or false if the pattern is found or not found. use only functions to get the length of a string and one to return the nth character
 
 lenStr = len(strToSearch)
 
@@ -24,9 +23,4 @@ for i in strArr:
 		#print (i)
 		print "found: ",i
 		break
-	"""
-	else:#to see what and how many times it looped
-		print (i)
-	"""
-#is this valid? i mean I don't find the nth character i am splitting the string array into an array of strings...
 
