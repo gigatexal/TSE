@@ -15,13 +15,36 @@ def match(pattern, string):
 					break
 	
 
+"""
+unit tests
+"""
+class testMatch(unittest.TestCase):
+	def testPatternLongerThanSearchString(self):
+		s = 'is'
+		p = 'this is not'
+		self.assertFalse(match(p,s))
 
+	def testPatternShorterThanSearchStringAndNotInSearchString(self):
+		s = 'is'
+		p = 'does not contain'
+		self.assertFalse(match(p,s))
 
+	def testPatternShorterThanSearchStringAndInSearchString(self):
+		s = 'this is not'
+		p = 'is'
+		self.assertTrue(match(p,s))
+
+	def testPatternEqualToSearchStringAndNotInSearchString(self):
+		s = 'this'
+		p = 'here'
+		self.assertFalse(match(p,s))
+
+	def testPatternEqualToSearchStringAndInSearchString(self):
+		s = 'this is a test'
+		p = 'this is a test'
+		self.assertTrue(match(p,s))
+			
 
 if __name__ == "__main__":
-	p = "is"
-	s = "this is"
-
-	print(match(p,s))
-
+	unittest.main()
 
