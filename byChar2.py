@@ -1,6 +1,7 @@
 import unittest
 
 def match(pattern, string):
+	""" match(pattern, searchString) returns boolean given a pattern string and a searchString and if the pattern string is found in the searchString then it returns true. Caveats: The edge case of searching for the space or ' ' always returns false. Otherwise known as a known bug.""" 
 	lenPattern = len(pattern)
 	lenString = len(string)
 	if (lenPattern > lenString or lenPattern == 0):
