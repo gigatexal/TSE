@@ -1,7 +1,10 @@
 import unittest
 
 def match(pattern, string):
-	""" match(pattern, searchString) returns boolean given a pattern string and a searchString and if the pattern string is found in the searchString then it returns true. Caveats: The edge case of searching for the space or ' ' always returns false. Otherwise known as a known bug.""" 
+	""" match(pattern, searchString) returns boolean given a pattern string and a 
+	searchString and if the pattern string is found in the searchString then it returns true. 
+	Caveats: The edge case of searching for the space or ' ' always returns false. 
+	Otherwise known as a known bug.""" 
 	lenPattern = len(pattern)
 	lenString = len(string)
 	if (lenPattern > lenString or lenPattern == 0):
@@ -49,15 +52,7 @@ class testMatch(unittest.TestCase):
 		s = 'a'
 		p = 'a'
 		self.assertTrue(match(p,s))	
-	"""
-	def testEmptyStrings(self):
-	#this fails, i would think it wouldn't. Basically it should 
-	#find the space between 'this' and 'is' 
-		s = ' '
-		p = 'this is'
-		self.assertTrue(match(p,s))	
-	#makes sense actually - the code above checks for len of the string, and it can't be 0 which is what len(' ') gives me
-	"""
+
 if __name__ == "__main__":
 	unittest.main()
 
